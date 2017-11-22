@@ -104,8 +104,8 @@ function pre_install(){
     while true
     do
     echo -e "请输入SSR连接端口,不设置将默认138端口:"
-    read -p "(默认自动设置SSR端口为138):" shadowsocksport
-    [ -z "$shadowsocksport" ] && shadowsocksport="138"
+    read -p "(默认自动设置SSR端口为80):" shadowsocksport
+    [ -z "$shadowsocksport" ] && shadowsocksport="80"
     expr $shadowsocksport + 0 &>/dev/null
     if [ $? -eq 0 ]; then
         if [ $shadowsocksport -ge 1 ] && [ $shadowsocksport -le 65535 ]; then
